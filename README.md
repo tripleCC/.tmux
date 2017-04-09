@@ -43,10 +43,11 @@ Troubleshooting
 
    This particularly happens on Linux when the distribution provides a version
    of glib that received Unicode 9.0 upgrades (glib `>= 2.50.1`) while providing
-   a version of glibc that didn't (`< 2.26`). You may also configure `LC_CTYPE`
-   to use an `UTF-8` locale. Typically VTE based terminal emulators rely on
-   glib's `g_unichar_iswide()` function while tmux relies on glibc's `wcwidth()`
-   function. When these two functions disagree, display gets messed up.
+   a version of glibc that didn't (glibc `< 2.26`). You may also configure
+   `LC_CTYPE` to use an `UTF-8` locale. Typically VTE based terminal emulators
+   rely on glib's `g_unichar_iswide()` function while tmux relies on glibc's
+   `wcwidth()` function. When these two functions disagree, display gets messed
+   up.
 
    This can also happen on MacOS when using iTerm2 and "Use Unicode version 9
    character widths" is enabled in `Preferences... > Profiles > Text`
