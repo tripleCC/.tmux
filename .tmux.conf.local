@@ -241,7 +241,7 @@ set -g mode-keys vi
 set-option -g default-shell /bin/zsh
 
 # system - keys - remap caps-lock to ctrl
-set prefix C-a
+set -g prefix C-a
 unbind-key C-b
 bind-key C-a send-prefix
 
